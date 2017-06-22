@@ -75,16 +75,16 @@ Calculator.prototype.calcExp = function () {
     }
 }
 
-Calculator.prototype.isNumber = function (element) {
-    return /(\d|\(|\))/.test(element);
+Calculator.prototype.isExpValid = function (digit) {
+    return /(^[0-9]|\(|\))/.test(digit);
 }
 
 Calculator.prototype.isFirstSignal = function (digit) {
-    return !this.isNumber(digit) && this.display.value == '';
+    return !this.isExpValid(digit) && this.display.value == '';
 }
 
 Calculator.prototype.isRepeatedSignal = function (digit) {
-    let isSignal = !this.isNumber(digit);
+    let isSignal = !this.isExpValid(digit);
     let flag = isSignal && this.tempSignal;
 
     this.tempSignal = isSignal;
