@@ -1,0 +1,68 @@
+/* Calculator */
+
+.loan__calculator {
+  position: relative;
+}
+
+.loan__calculator.loa__calculator--invalid:before {
+    content: "invalid expression";
+    position: absolute;
+    top: 0;
+    color: var(--input-error-text-color);
+    transform: translateY(calc(-100% - 4px));
+    font-size: 13px;
+}
+
+.loan__calculator .loan__calculator__digits {
+  display: flex;
+}
+
+.loan__calculator__digits .loan__column {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.loan__input-form-calculator {
+  border: 0;
+  background-color: var(--input-bg-color-disabled);
+  font-family: var(--family-sourcesanspro);
+  font-size: 16px;
+  color: var(--default-color);
+  width: 100%;
+  border-radius: 2px;
+  padding: 18px 16px;
+  transition: all .2s linear;
+}
+
+.loan__btn-calculator {
+  color: var(--primary-color);
+  font-weight: 600;
+  background-color: var(--btn-calc-color);
+  border: 0;
+  width: var(--w-btn-calc);
+  height: var(--h-btn-calc);
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #fff;
+  transition: background-color .2s linear;
+}
+.loan__btn-calculator:hover {
+  background-color: var(--btn-calc-color-hover);
+}
+.loan__btn-calculator:focus {
+  background-color: var(--btn-calc-color-focus);
+}
+
+.loan__btn-calculator-0 {
+  width: 101px;
+}
+
+.loan__calculator__display .loan__input-form {
+  color: var(--default-color);
+  font-family: var(--family-sourcesanspro);
+  padding: 18px 16px;
+  font-weight: 400;
+}
+
+.loan__calculator__display .loan__input-form:hover {
+  background-color: var(--input-bg-color);
+}

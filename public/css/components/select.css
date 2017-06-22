@@ -1,0 +1,109 @@
+.loan__select {
+  width: 100%;
+  display: table;
+  position: relative;
+}
+
+.loan__select .loan__select-input .loan__input-form:before,
+.loan__select .loan__select-input .loan__input-form:after {
+  font-family: 'Material Icons';
+  font-size: 20px;
+  position: absolute;
+  right: 5px;
+}
+
+.loan__select .loan__select-input .loan__input-form:before {
+  content: "arrow_drop_up";
+  top: 7px;
+}
+
+.loan__select .loan__select-input .loan__input-form:after {
+  content: "arrow_drop_down";
+  bottom: 7px;
+}
+
+.loan__select .loan__select-dropdown-search {
+  position: relative;
+}
+
+.loan__select .loan__select-dropdown-search:before {
+  content: "search";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  font-family: "Material Icons";
+  font-size: 25px;
+  margin: auto;
+  height: 25px;
+  color: #728694;
+}
+
+.loan__select, .loan__select-dropdown-search input {
+  font-family: var(--family-sourcesanspro);
+  font-size: 16px;
+  position: relative;
+  background-color: transparent;
+}
+
+.loan__select .loan__input-form {
+  cursor: pointer;
+  text-align: left;
+}
+
+.loan__select-dropdown {
+  box-shadow: 0 2px 14px 0 rgba(58, 75, 87, 0.1);
+  border: 1px solid #e4e9ec;
+  border-radius: 4px;
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 42px;
+  width: 100%;
+  background-color: var(--white-color);
+}
+
+.loan__select-dropdown.loan__select-dropdown--is-visible {
+  display: block;
+}
+
+.loan__select-dropdown-search input {
+  width: 100%;
+  padding: 10px 10px 10px 45px;
+  border-width: 0 0 1px 0;
+  border-color: #e4e9ec;
+  border-style: solid;
+}
+
+.loan__select-dropdown-search input::placeholder {
+  color: #b9c3ca;
+}
+
+.loan__select-dropdown-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: var(--white-color);
+  max-height: 192px;
+  overflow: auto;
+}
+
+.loan__select-li {
+  padding: 10px 20px;
+  color: #728694;
+  transition: all .2s linear;
+}
+
+.loan__select-li.loan__select-li--is-hidden {
+  display: none;
+}
+
+.loan__select-li.loan__select-li--is-active {
+  color: #329de6;
+}
+
+.loan__select-li:hover {
+  background-color: #f8fafa;
+  cursor: pointer;
+}

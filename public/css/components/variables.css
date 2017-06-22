@@ -1,0 +1,47 @@
+:root {
+  --h-header: 448px;
+  --h-form: 440px;
+  --w-container: 688px;
+  --h-footer: 128px;
+  --w-btn-calc: 50px;
+  --h-btn-calc: 48.5px;
+  --gap: 10px;
+
+  --family-opensans: 'Open Sans', sans-serif;
+  --family-sourcesanspro: 'Source Sans Pro', sans-serif;
+  --font-size-default: 14px;
+
+  --primary-color: #3e9cfc;
+  --body-color: #fafafa;
+  --white-color: #fff;
+  --default-color: #4a4a4a;
+  --warning-color: #f5984c;
+
+  --input-bg-color: #e1e9ed;
+  --input-bg-color-hover: #cddae1;
+  --input-bg-color-disabled: #ebf0f3;
+  --input-text-color: #39536c;
+  --input-placeholder-color: #bbc9d2;
+  --input-border-color: #419bf9;
+
+  --input-error-bg-color: #f6ccd1;
+  --input-error-bg-color-hover: #f6ccd1;
+  --input-error-bg-color-disabled: #f6ccd1;
+  --input-error-text-color: #d0011b;
+  --input-error-placeholder-color: #d0011b;
+  --input-error-border-color: #d0011b;
+
+  --btn-primary-color: var(--primary-color);
+  --btn-primary-color-hover: #2989ec;
+  --btn-primary-color-focus: #217ddc;
+
+  --btn-success-color: #72cc98;
+  --btn-success-color-hover: #72cc98;
+  --btn-success-color-focus: #72cc98;
+
+  --btn-calc-color: #c5e1fe;
+  --btn-calc-color-hover: #a8d3fe;
+  --btn-calc-color-focus: #95c8fd;
+
+  --footer-text-color: #9b9b9b;
+}
