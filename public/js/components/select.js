@@ -9,9 +9,6 @@ function Select(loanSelect, buttonSelect, inputSearch, ulSelect, dropdownSelect)
         { month: 36, rate: 9 },
         { month: 48, rate: 15 }
     ];
-
-    console.log('Select', this);
-
     this.createList();
 }
 

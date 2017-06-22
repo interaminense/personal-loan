@@ -3,7 +3,10 @@ function CalcTotalTest() {
 }
 
 CalcTotalTest.prototype.total = function (loan, numberOfMonths, interest) {
-    return Math.floor(((interest / 100) / (1 - Math.pow((1 + (interest / 100)), - numberOfMonths))) * loan) * numberOfMonths;
+    let i = interest / 100;
+    let exp = (interest / 100) / (1 - Math.pow((1 + (interest / 100)), - numberOfMonths)) * loan;
+    let result = Math.floor(exp) * numberOfMonths; //arrendodamento para baixo
+    return result;
 }
 
 CalcTotalTest.prototype.currencyFormat = function (digit) {

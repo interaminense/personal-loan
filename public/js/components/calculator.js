@@ -3,8 +3,6 @@ function Calculator(form, calculator) {
     this.calculator = loanCalculator;
     this.tempSignal = false;
     this.calcTest = new CalculatorTest();
-
-    console.log("Calculator", this);
 }
 
 Calculator.prototype.success = function () {

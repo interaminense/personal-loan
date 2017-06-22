@@ -9,9 +9,7 @@ describe("Calculator", function () {
         expect(calculator.isExpressionValid('1/100')).toEqual(true);
         expect(calculator.isExpressionValid('1+5-10*50-100/(1*10)+(5-1000)')).toEqual(true);
         expect(calculator.isExpressionValid('1989/(10*12)')).toEqual(true);
-    });
 
-    it("sould be able if is invalid expression", function () {
         expect(calculator.isExpressionValid('1989/(10*12')).toEqual(false);
         expect(calculator.isExpressionValid('-(100')).toEqual(false);
         expect(calculator.isExpressionValid('((5+3)')).toEqual(false);
