@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Personal Loan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/app.css" rel="stylesheet">
+</head>
+
+<body class="loan">
+
+  <header class="loan__header"></header>
+
+  <main class="loan__main">
+    <section class="loan__container loan__container--form">
+
+      <!-- title -->
+      <div class="loan__text-center">
+        <h2 class="loan__title">Personal Loan</h2>
+        <h3 class="loan__subtitle">Save and no red tape loan.</h3>
+      </div>
+
+      <!-- form -->
+      <form id="form" autocomplete="off" class="loan__form">
+
+        <!-- Left -->
+        <div class="loan__form__side-left">
+
+          <!-- component calculator -->
+          <div id="loanCalculator" class="loan__calculator">
+            <input name="display" type="text" value="" class="loan__input-form-calculator loan__bottom-gap" disabled>
+            <div class="loan__calculator__digits">
+              <div class="loan__column loan__right-gap">
+                <div class="loan__row">
+                  <button type="button" class="loan__btn-calculator" name="removeDigit">&#60;</button>
+                  <button type="button" class="loan__btn-calculator" name="addDigit">&#40;</button>
+                  <button type="button" class="loan__btn-calculator" name="addDigit">&#41;</button>
+                </div>
+                <div class="loan__row">
+                  <button type="button" class="loan__btn-calculator" name="addDigit">1</button>
+                  <button type="button" class="loan__btn-calculator" name="addDigit">2</button>
+                  <button type="button" class="loan__btn-calculator" name="addDigit">3</button>
+                </div>
+                <div class="loan__row">
+                  <button type="button" class="loan__btn-calculator" name="addDigit">4</button>
+                  <button type="button" class="loan__btn-calculator" name="addDigit">5</button>
+                  <button type="button" class="loan__btn-calculator" name="addDigit">6</button>
+                </div>
+                <div class="loan__row">
+                  <button type="button" class="loan__btn-calculator" name="addDigit">7</button>
+                  <button type="button" class="loan__btn-calculator" name="addDigit">8</button>
+                  <button type="button" class="loan__btn-calculator" name="addDigit">9</button>
+                </div>
+                <div class="loan__row">
+                  <button type="button" class="loan__btn-calculator loan__btn-calculator-0" name="addDigit">0</button>
+                  <button type="button" class="loan__btn-calculator" name="addDigit">.</button>
+                </div>
+              </div>
+              <div class="loan__column">
+                <button type="button" class="loan__btn-calculator" name="addDigit">+</button>
+                <button type="button" class="loan__btn-calculator" name="addDigit">-</button>
+                <button type="button" class="loan__btn-calculator" name="addDigit">*</button>
+                <button type="button" class="loan__btn-calculator" name="addDigit">/</button>
+                <button type="button" class="loan__btn-calculator" name="calcExp">=</button>
+              </div>
+            </div>
+          </div>
+          <!-- end component calculator -->
+
+        </div>
+
+        <!-- Right -->
+        <div class="loan__form__side-right">
+
+          <div>
+            <div class="loan__form-group loan__bottom-gap">
+              <label for="Months" class="loan__required" for="">Months</label>
+
+              <!--component select-->
+              <div id="select" class="loan__select">
+                <div class="loan__select-input">
+                  <button id="loanSelect_button" type="button" class="loan__input-form">
+                    choose an options...
+                  </button>
+                </div>
+                <div id="loanSelect_dropdown" class="loan__select-dropdown">
+                  <div class="loan__select-dropdown-search">
+                    <input id="loanSelect_inputSearch" type="text" placeholder="choose an options...">
+                  </div>
+                  <ul id="loanSelect_ul" class="loan__select-dropdown-list"></ul>
+                </div>
+              </div>
+              <!--end component select-->
+
+            </div>
+
+            <button type="button" name="btnCalcTotal" class="loan__btn loan__btn-default loan__btn-leaked loan__btn-block loan__top-gap loan__bottom-gap">Calculate</button>
+
+            <div class="loan__form-group loan__top-gap">
+              <label for="total">Total</label>
+              <input type="text" name="inputTotal" placeholder="R$ 00,00" class="loan__input-form" disabled>
+            </div>
+          </div>
+
+          <button type="submit" name="btnGetQuot" class="loan__btn loan__btn-default loan__btn-block">Get Quot</button>
+
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <footer class="loan__footer">
+    <div class="loan__container-footer">
+      <p class="loan__text-footer">Liferay Inc.<br>Copyright © 2016 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/components/calculator.js"></script>
+  <script src="js/components/select.js"></script>
+  <script src="js/calc-total.js"></script>
+  <script src="js/get-quot.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
