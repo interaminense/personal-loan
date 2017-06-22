@@ -1,7 +1,7 @@
 # Personal Loan
 
 ### Install
-`npm install --save-dev`
+`npm install`
 
 ### Start
 `npm start`
