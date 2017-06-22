@@ -1,0 +1,16 @@
+{
+  "name": "personal-loan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  },
+  "dependencies": {}
+}
