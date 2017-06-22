@@ -1,7 +1,8 @@
-function Calculator() {
+function Calculator(form, calculator) {
     this.display = form.display;
     this.calculator = loanCalculator;
     this.tempSignal = false;
+    this.calcTest = new CalculatorTest();
 
     console.log("Calculator", this);
 }
@@ -40,7 +41,7 @@ Calculator.prototype.removeDigit = function () {
     }
 }
 
-Calculator.prototype.removeAllDigit = function() {
+Calculator.prototype.removeAllDigit = function () {
 
     this.display.value = '';
 
@@ -52,7 +53,8 @@ Calculator.prototype.removeAllDigit = function() {
 }
 
 Calculator.prototype.calcExp = function () {
-    try {
+
+    if (this.calcTest.isExpressionValid(this.display.value)) {
 
         this.success();
         let str = this.display.value;
@@ -66,7 +68,8 @@ Calculator.prototype.calcExp = function () {
 
             return undefined;
         }
-    } catch (err) {
+
+    } else {
 
         this.error();
     }

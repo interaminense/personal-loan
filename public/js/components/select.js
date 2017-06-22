@@ -1,4 +1,4 @@
-function Select() {
+function Select(loanSelect, buttonSelect, inputSearch, ulSelect, dropdownSelect) {
     this.select = loanSelect;
     this.button = buttonSelect;
     this.input = inputSearch;

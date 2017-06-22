@@ -7,10 +7,10 @@ const ulSelect = document.querySelector('#loanSelect_ul');
 const dropdownSelect = document.querySelector('#loanSelect_dropdown');
 const btnCalcTotal = form.btnCalcTotal;
 
-const calculator = new Calculator();
-const select = new Select();
-const calcTotal = new CalcTotal();
-const getQuot = new GetQuot();
+const calculator = new Calculator(form, loanCalculator);
+const select = new Select(loanSelect, buttonSelect, inputSearch, ulSelect, dropdownSelect);
+const calcTotal = new CalcTotal(form);
+const getQuot = new GetQuot(form);
 
 loanCalculator.addEventListener('click', function (e) {
     switch (e.target.name) {
@@ -86,7 +86,7 @@ form.addEventListener('submit', function (e) {
         let interest = select.get().rate;
         let loan = calculator.get();
         let numberOfMonths = select.get().month;
-        let totalDebit = calcTotal.getPmt(loan, numberOfMonths, interest);
+        let totalDebit = calcTotal.total(loan, numberOfMonths, interest);
 
         getQuot.send(interest, loan, numberOfMonths, totalDebit);
     }
