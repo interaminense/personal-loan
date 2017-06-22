@@ -13,15 +13,35 @@ const calcTotal = new CalcTotal();
 const getQuot = new GetQuot();
 
 loanCalculator.addEventListener('click', function (e) {
+    switch (e.target.name) {
+        case 'addDigit':
+            calculator.addDigit(e.target.textContent);
+            break;
+        case 'removeDigit':
+            calculator.removeDigit();
+            break;
+        case 'calcExp':
+            calculator.calcExp();
+            break;
+    }
+});
 
-    if (e.target.name == 'addDigit') {
-        calculator.addDigit(e.target.textContent);
-    } else if (e.target.name == 'removeDigit') {
-        calculator.removeDigit();
-    } else if (e.target.name == 'calcExp') {
+loanCalculator.addEventListener('dblclick', function (e) {
+    if (e.target.name == 'removeDigit') {
+        calculator.removeAllDigit();
+    }
+});
+
+document.addEventListener('keyup', function (e) {
+    if (/(\*|\+|\-|\/|\d|\(|\))/.test(e.key)) {
+        calculator.addDigit(e.key);
+    }
+    if (e.keyCode == 13) {
         calculator.calcExp();
     }
-
+    if (e.keyCode == 8) {
+        calculator.removeDigit();
+    }
 });
 
 buttonSelect.addEventListener('click', function () {
@@ -60,7 +80,7 @@ form.addEventListener('submit', function (e) {
     calculator.calcExp();
 
     if (calculator.get() != undefined && select.get() != undefined) {
-        
+
         calcTotal.calc(calculator.get(), select.get());
 
         let interest = select.get().rate;

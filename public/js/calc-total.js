@@ -3,7 +3,7 @@ function CalcTotal() {
 }
 
 CalcTotal.prototype.calc = function (calculator, select) {
-  
+
   let loan = calculator;
   let numberOfMonths = select.month;
   let interest = select.rate;

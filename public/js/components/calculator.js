@@ -40,6 +40,17 @@ Calculator.prototype.removeDigit = function () {
     }
 }
 
+Calculator.prototype.removeAllDigit = function() {
+
+    this.display.value = '';
+
+    this.isRepeatedSignal(this.display.value.charAt(this.display.value.length - 1));
+
+    if (this.display.value == '') {
+        this.success();
+    }
+}
+
 Calculator.prototype.calcExp = function () {
     try {
 
