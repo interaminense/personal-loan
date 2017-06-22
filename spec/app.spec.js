@@ -15,6 +15,7 @@ describe("Calculator", function () {
         expect(calculator.isExpressionValid('1989/(10*12')).toEqual(false);
         expect(calculator.isExpressionValid('-(100')).toEqual(false);
         expect(calculator.isExpressionValid('((5+3)')).toEqual(false);
+        expect(calculator.isExpressionValid('5/0')).toEqual(false);
     });
 
 });
@@ -28,6 +29,8 @@ describe("CalcTotalTest", function () {
 
     it("sould be able to calc total", function () {
         expect(calcTotal.total(100000, 24, 7)).toEqual(209232);
+        expect(calcTotal.total(100000, 36, 9)).toEqual(339228);
+        expect(calcTotal.total(100000, 48, 15)).toEqual(720864);
     });
 
     it("sould be able to return currency Format", function () {
