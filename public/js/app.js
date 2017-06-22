@@ -33,12 +33,16 @@ loanCalculator.addEventListener('dblclick', function (e) {
 });
 
 document.addEventListener('keyup', function (e) {
-    if (/(\*|\+|\-|\/|\d|\(|\))/.test(e.key)) {
+
+    //(0-9) or (+ - * /)
+    if (/(^[0-9]|^[-+*/])/.test(e.key)) {
         calculator.addDigit(e.key);
     }
+    //13 == enter
     if (e.keyCode == 13) {
         calculator.calcExp();
     }
+    //8 == backspace
     if (e.keyCode == 8) {
         calculator.removeDigit();
     }
@@ -86,7 +90,9 @@ form.addEventListener('submit', function (e) {
         let interest = select.get().rate;
         let loan = calculator.get();
         let numberOfMonths = select.get().month;
-        let totalDebit = calcTotal.total(loan, numberOfMonths, interest);
+
+        let getTotal = new CalcTotalTest();
+        let totalDebit = getTotal.total(loan, numberOfMonths, interest);
 
         getQuot.send(interest, loan, numberOfMonths, totalDebit);
     }
