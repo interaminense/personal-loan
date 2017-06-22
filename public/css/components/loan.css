@@ -66,7 +66,8 @@ h3 {
 }
 
 .loan .loan__container {
-  width: var(--w-container);
+  width: 100%;
+  max-width: var(--w-container);
   margin: 0 auto;
 }
 .loan .loan__container.loan__container--form {
@@ -169,7 +170,7 @@ h3 {
   border: 1px solid var(--input-error-border-color);
 }
 
-.loan .loan__input-form.error:hover, 
+.loan .loan__input-form.error:hover,
 .loan .loan__input-form.error:focus,
 .loan .loan__input-form-calculator.error:hover,
 .loan .loan__input-form-calculator.error:focus {
@@ -259,7 +260,7 @@ h3 {
 
 .loan .loan__container-footer {
   font-family: var(--family-opensans);
-  
+
   padding: 0 128px;
   width: 100%;
 }
