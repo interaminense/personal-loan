@@ -2,7 +2,7 @@ function GetQuot() {
   this.btnGetQuot = form.btnGetQuot;
 }
 
-GetQuot.prototype.send = function (interest, loan, numberOfMonths, totalDebit) {
+GetQuot.prototype.send = function (interest, loan, numberOfMonths, totalDebt) {
 
   let self = this;
 
@@ -10,7 +10,7 @@ GetQuot.prototype.send = function (interest, loan, numberOfMonths, totalDebit) {
     interest,
     loan,
     numberOfMonths,
-    totalDebit
+    totalDebt
   }
 
   let callback = function () {
